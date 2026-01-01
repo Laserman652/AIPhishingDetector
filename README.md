@@ -8,15 +8,15 @@ This project demonstrates how machine learning and modern NLP embeddings can be 
 
 ## What This Project Does
 - Takes raw email text as input
-- Converts the text into semantic embeddings using DistilBERT
-- Uses a Logistic Regression classifier to predict phishing probability
-- Outputs a human-friendly verdict with confidence
+- Converts the text into **semantic embeddings using DistilBERT**
+- Uses a **Logistic Regression classifier** to predict phishing probability
+- Outputs a **human-friendly verdict** with confidence
 
 ## Verdictsgit add .
 
-- **LEGIT** (Safe email)
-- **SUSPICIOUS** (Needs review)
-- **PHISHING** (High risk)
+- **LEGIT** --> (Safe email)
+- **SUSPICIOUS** --> (Needs review)
+- **PHISHING** --> (High risk)
 
 ## Tech Stack Used
 - Python
@@ -27,8 +27,8 @@ This project demonstrates how machine learning and modern NLP embeddings can be 
 - Joblib
 
 ## Why This Approach
-Instead of using basic keyword matching or TF-IDF alone, this project uses DistilBERT embeddings to capture the intent and context of email text (urgency, threats, authority abuse).  
-The classifier itself remains simple (Logistic Regression) to keep the system:
+Instead of using basic keyword matching or TF-IDF alone, this project uses **DistilBERT embeddings** to capture the **intent and context** of email text (urgency, threats, authority abuse).  
+The **Logistic Regression classifier** keeps the system:
 - Interpretable
 - Lightweight
 - Easy to debug
@@ -51,17 +51,23 @@ phishing-detector/
 ## Python environment setup
 
 ```
-# Install dependencies
+# Create virtual environment
 python -m venv venv
-venv\Scripts\activate      # Windows
 
+# Activate (Windows)
+venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 
 ```
 ## Dataset Format
-The dataset CSV must contain at least two columns:  
-- `text` → email content  
-- `label` → 1 for phishing, 0 for legitimate
+The CSV dataset must have two columns:
+| Column | Description                      |
+| ------ | -------------------------------- |
+| text   | Email content                    |
+| label  | 1 for phishing, 0 for legitimate |
+
 ## sample dataset
 ```
 text,label
@@ -71,11 +77,11 @@ text,label
 ```
 ## How Training Works
 1. Load phishing email dataset
-2. Tokenize emails using DistilBERT tokenizer
-3. Generate embeddings from DistilBERT CLS token
-4. Train Logistic Regression on embeddings
+2. Tokenize emails using **DistilBERT tokenizer**
+3. Generate embeddings from DistilBERT **CLS token**
+4. Train **Logistic Regression** on embeddings
 5. Evaluate accuracy
-6. Save trained model using Joblib
+6. Save trained model using **Joblib**
 
 ## How Testing Works
 1. Load saved model
@@ -85,6 +91,7 @@ text,label
 5. Convert probability into verdict
 
 ## Example Output
+```
 **Email:** Please verify your account immediately  
 **Verdict:** PHISHING (High Risk)  
 **Phishing Probability:** 99.93%
@@ -92,6 +99,7 @@ text,label
 **Email:** Team meeting at 5 PM today  
 **Verdict:** LEGIT  
 **Phishing Probability:** 0.37%
+```
 
 ## How to Run
 1. Train the model:  
@@ -104,13 +112,20 @@ text,label
    ```
 ## Model Evaluation Section
 ```
-# Model Performance (Example)
-Accuracy: 96.4%
-Precision: 95.1%
-Recall: 97.2%
-F1-score: 96.1%
-
+| Metric    | Score |
+| --------- | ----- |
+| Accuracy  | 96.4% |
+| Precision | 95.1% |
+| Recall    | 97.2% |
+| F1-score  | 96.1% |
 ```
+## Verdict Thresholds
+| Probability | Verdict    |
+| ----------- | ---------- |
+| 0 – 50%     | LEGIT      |
+| 50 – 90%    | SUSPICIOUS |
+| > 90%       | PHISHING   |
+
 
 ## Limitations
 - Model is only as good as the dataset
